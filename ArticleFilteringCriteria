@@ -1,0 +1,255 @@
+# ============================================================
+# Research-oriented organization filtering
+# ============================================================
+# Force-keep patterns for multilingual / abbreviated research organizations
+# ============================================================
+
+FORCE_KEEP_PATTERNS = [
+    # higher education systems / colleges
+    r"\bsystem of higher education\b",
+    r"\bpublic higher education\b",
+    r"\bstate colleges\b",
+    r"\bcolleges\b",
+    r"\bhigher colleges\b",
+    r"\bapplied education\b",
+    r"\btraining\b",
+
+    # multilingual university variants still missed
+    r"\buniversities\b",
+    r"\buniversitesi\b",
+    r"\buniversitetet\b",
+    r"\buniversiteit\b",
+    r"\bvrije universiteit\b",
+    r"\bvinuniversity\b",
+    r"\bvit\b",
+    r"\bvidyapeeth\b",
+    r"\bakademia\b",
+    r"\balma mater\b",
+
+    # well-known universities / schools / academic institutions by short name
+    r"\beth zurich\b",
+    r"\bku leuven\b",
+    r"\bhec montreal\b",
+    r"\bsuny\b",
+    r"\bensta paris\b",
+    r"\btelecom sudparis\b",
+    r"\besic\b",
+    r"\bmica\b",
+
+    # research institutes / public research organizations / museums / libraries
+    r"\bacademia sinica\b",
+    r"\bhun-ren\b",
+    r"\bicrea\b",
+    r"\binria\b",
+    r"\binrae\b",
+    r"\bsintef\b",
+    r"\bin esc tec\b",
+    r"\binesc\b",
+    r"\bi2cat\b",
+    r"\bsciensano\b",
+    r"\bsri international\b",
+    r"\brand corporation\b",
+    r"\bnatural history museum\b",
+    r"\bbibliotheca\b",
+    r"\bknowledge bank\b",
+    r"\bzentralbibliothek\b",
+    r"\bpasteur network\b",
+    r"\bcity of hope\b",
+    r"\bgustave roussy\b",
+    r"\bframingham heart study\b",
+    r"\boak ridge associated universities\b",
+
+    # medical / hospital systems and health research organizations
+    r"\bmedical corporation\b",
+    r"\bmedical city\b",
+    r"\bmedicine\b",
+    r"\bhealth\b",
+    r"\bhealthcare\b",
+    r"\bhealth services\b",
+    r"\bhealth system\b",
+    r"\bheart study\b",
+    r"\beye & ear\b",
+    r"\berasmus mc\b",
+    r"\bmass general brigham\b",
+    r"\bhouston methodist\b",
+    r"\bkaiser permanente\b",
+    r"\brigshospitalet\b",
+    r"\bupmc\b",
+    r"\badventhealth\b",
+    r"\bbaycrest\b",
+    r"\bhebrew seniorlife\b",
+    r"\bhamad medical\b",
+    r"\bkarolinska institutet\b",
+    r"\bking .* medical city\b",
+    r"\bkantonsspital\b",
+    r"\brayal infirmary\b",
+    r"\broyal infirmary\b",
+    r"\bchris o'brien lifehouse\b",
+    r"\bulss\b",
+    r"\bunicaner\b",
+    r"\bunicancer\b",
+    r"\ba\.o\.u\.\b",
+    r"\bausl\b",
+    r"\bazienza ospedaliera\b",
+    r"\bazienda ospedaliera\b",
+    r"\bcomplexo hospitalario universitario\b",
+    r"\bcharite\b",
+    r"\bfaculte de medecine\b",
+
+    # government / public agencies with research or science relevance
+    r"\bdepartment of science\b",
+    r"\bdepartment of agriculture\b",
+    r"\bdepartment of energy\b",
+    r"\bdepartment of defense\b",
+    r"\bdepartment of veterans affairs\b",
+    r"\bcenters for disease control\b",
+    r"\bcancer treatment\b",
+    r"\bfda\b",
+    r"\busda\b",
+    r"\bdoe\b",
+    r"\bworld bank\b",
+    r"\bfederal reserve\b",
+    r"\bpublic authority for applied education\b",
+    r"\bservicio nacional de aprendizaje\b",
+]
+
+KEEP_PATTERNS = [
+    # English
+    r"\buniversity\b", r"\buniv\b", r"\bcollege\b", r"\bschool\b",
+    r"\binstitute\b", r"\binstitution\b", r"\bacademy\b",
+    r"\bresearch\b", r"\blaboratory\b", r"\blab\b",
+    r"\bcenter\b", r"\bcentre\b",
+    r"\bpolytechnic\b", r"\bfaculty\b",
+
+    # Spanish / Portuguese / Italian / French / Catalan / Latin variants
+    r"\buniversidad\b", r"\buniversidade\b", r"\buniversita\b",
+    r"\buniversità\b", r"\buniversite\b", r"\buniversité\b",
+    r"\buniversitat\b", r"\buniversitas\b", r"\buniversiti\b",
+    r"\buniwersytet\b", r"\buniversitet\b", r"\buniversitatea\b",
+    r"\bcentro universitario\b", r"\bcorporacion universitaria\b",
+    r"\bpolitecnico\b", r"\bpolitecnica\b", r"\bpolitecnica\b",
+    r"\bpolytechnique\b", r"\btecnologico\b", r"\btecnologica\b",
+    r"\binstituto\b", r"\binstitut\b", r"\bistituto\b",
+    r"\bfondazione\b", r"\bfundacao\b", r"\bfundacion\b",
+    r"\bfondation\b",
+
+    # German / Dutch / Nordic / Central European
+    r"\bhochschule\b", r"\bfachhochschule\b",
+    r"\btechnische universitat\b", r"\btechnische universität\b",
+    r"\buniversitat\b", r"\buniversität\b",
+    r"\bklinikum\b", r"\bziekenhuis\b",
+
+    # Schools and grandes écoles
+    r"\becole\b", r"\bécole\b", r"\bescuela\b", r"\bescola\b",
+    r"\bscuola\b", r"\bconservatoire\b",
+
+    # Hospitals / medical / health research organizations
+    r"\bhospital\b", r"\bhospitals\b", r"\bhopital\b", r"\bhôpital\b",
+    r"\bospedale\b", r"\bospedaliero\b", r"\bospedaliera\b",
+    r"\bclinic\b", r"\bkliniken\b", r"\bmedical center\b",
+    r"\bmedical centre\b", r"\bmedicine\b", r"\bhealth\b",
+    r"\bhealthcare\b", r"\bhealth care\b",
+    r"\bnhs\b", r"\bchu\b", r"\bchuc\b", r"\baphp\b",
+    r"\birccs\b", r"\bpoliclinico\b", r"\bpoliclinica\b",
+    r"\bsairaala\b", r"\buniversitatsklinikum\b",
+
+    # Public / national / research agencies
+    r"\bnational\b", r"\bministry\b", r"\bministerio\b",
+    r"\bconsejo\b", r"\bconsiglio\b", r"\bcomision\b",
+    r"\bagency\b", r"\bcouncil\b", r"\bfoundation\b",
+    r"\bassociation\b", r"\bsociety\b",
+    r"\bfraunhofer\b", r"\bleibniz\b", r"\binria\b", r"\binrae\b",
+    r"\bcsic\b", r"\bcnr\b", r"\bcsiro\b", r"\briken\b",
+    r"\bsintef\b", r"\bcgiar\b", r"\bcinvestav\b",
+    r"\bciber\b", r"\bidibaps\b", r"\bidibell\b"
+]
+
+FORCE_DROP_PATTERNS = [
+    r"\babbvie\b", r"\badobe\b", r"\balibaba\b", r"\balphabet\b",
+    r"\bant group\b", r"\bapple\b", r"\bastrazeneca\b", r"\baxa\b",
+    r"\bbooz allen\b", r"\bbritish telecom\b", r"\bcapgemini\b",
+    r"\bchina mobile\b", r"\bdeloitte\b", r"\bdell\b",
+    r"\bdeepmind\b", r"\bebay\b", r"\bericsson\b", r"\belsevier\b",
+    r"\bfacebook\b", r"\bgenentech\b", r"\bgoogle\b", r"\bhonda\b",
+    r"\bhuawei\b", r"\bibm\b", r"\bintel\b", r"\binfosys\b",
+    r"\bintuitive surgical\b", r"\bjanssen\b", r"\bjohnson & johnson\b",
+    r"\bmedtronic\b", r"\bmerck\b", r"\bmicrosoft\b", r"\bnokia\b",
+    r"\bnovartis\b", r"\bpfizer\b", r"\bphilips\b", r"\broche\b",
+    r"\bsaab\b", r"\bschneider electric\b", r"\bstate grid\b",
+    r"\btata consultancy\b", r"\btata sons\b", r"\btencent\b",
+    r"\btoyota\b", r"\bvolkswagen\b", r"\bvmware\b",
+    r"\bhewlett-packard\b", r"\binfineon\b", r"\bidorsia\b",
+    r"\bicon plc\b", r"\bindra\b", r"\bbracco\b", r"\bbavarian nordic\b",
+    r"\bcapitalbio\b", r"\bgen digital\b"
+]
+
+DROP_PATTERNS = [
+    # clear legal-commercial suffixes
+    r"\bltd\b", r"\blimited\b", r"\bllc\b", r"\binc\b",
+    r"\bcorp\b", r"\bcorporation\b", r"\bcompany\b",
+    r"\bco ltd\b", r"\bplc\b", r"\bgmbh\b", r"\bsarl\b",
+    r"\bpvt\b", r"\bprivate limited\b",
+
+    # clear service/commercial expressions
+    r"\bconsulting\b", r"\bconsultancy\b",
+    r"\bsolutions\b", r"\bsoftware\b",
+
+    # major commercial firms frequently appearing as WoS affiliations
+    r"\babbvie\b", r"\badobe\b", r"\balibaba\b", r"\balphabet\b",
+    r"\bant group\b", r"\bapple\b", r"\bastrazeneca\b",
+    r"\baxa\b", r"\bbooz allen\b", r"\bbracco\b",
+    r"\bbritish telecom\b", r"\bcapgemini\b",
+    r"\bchina mobile\b", r"\bdeloitte\b", r"\bdell\b",
+    r"\bdeepmind\b", r"\bebay\b", r"\bericsson\b",
+    r"\belsevier\b", r"\bfacebook\b", r"\bgenentech\b",
+    r"\bgoogle\b", r"\bhonda\b", r"\bhuawei\b",
+    r"\bibm\b", r"\bintel\b", r"\binfosys\b",
+    r"\bintuitive surgical\b", r"\bJohnson & Johnson\b".lower(),
+    r"\bmedtronic\b", r"\bmerck\b", r"\bmicrosoft\b",
+    r"\bnokia\b", r"\bnovartis\b", r"\bpfizer\b",
+    r"\bphilips\b", r"\broche\b", r"\bsaab\b",
+    r"\bschneider electric\b", r"\bstate grid\b",
+    r"\btata consultancy\b", r"\btencent\b",
+    r"\btoyota\b", r"\bvolkswagen\b", r"\bvmware\b"
+]
+
+
+def match_any_pattern(text, patterns):
+    for pat in patterns:
+        if re.search(pat, text):
+            return True, pat
+    return False, ""
+
+
+def classify_org(org_name):
+    org = normalize_org_name(org_name)
+    if org == "":
+        return False, "empty", ""
+
+    org_lower = org.lower()
+
+    # 1. Delete Enterprises
+    force_drop_hit, force_drop_rule = match_any_pattern(org_lower, FORCE_DROP_PATTERNS)
+    if force_drop_hit:
+        return False, "force_drop_commercial", force_drop_rule
+
+    # 2. Research/education/medical institutions are preferred
+    force_keep_hit, force_keep_rule = match_any_pattern(org_lower, FORCE_KEEP_PATTERNS)
+    if force_keep_hit:
+        return True, "force_keep", force_keep_rule
+
+    # 3. Keep normal research instutions
+    keep_hit, keep_rule = match_any_pattern(org_lower, KEEP_PATTERNS)
+    if keep_hit:
+        return True, "research_oriented", keep_rule
+
+    # 4. Delete commercial or industrial entities
+    drop_hit, drop_rule = match_any_pattern(org_lower, DROP_PATTERNS)
+    if drop_hit:
+        return False, "commercial_or_industrial", drop_rule
+
+    # 5. Manually judge the unknown after this script
+    if KEEP_UNKNOWN_ORGS:
+        return True, "unknown_retained", ""
+    else:
+        return False, "unknown_removed", ""
